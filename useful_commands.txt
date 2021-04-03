@@ -1,0 +1,17 @@
+1. Create a local ansible.cfg file with defaults inside project directory
+    - example:
+        [defaults]
+            inventory = <file-containing-IP-addresses>
+            private_key_file = ~/.ssh/id_private_file_name
+            remote_port = <Port-Number>
+
+2. Test connection to IP addresses in the inventory file using above config
+    - ansible all -m ping
+
+3. List hosts (IPs located in the inventory file)
+    - ansible all --list-hosts
+
+4. Using a module example
+    - setup (default configuration above)
+        - Gathers facts from systems listed in inventory file
+        - Example: ansible -m setup || ansible all -m setup --limit <ip-address>
