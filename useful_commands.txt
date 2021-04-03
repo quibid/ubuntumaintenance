@@ -15,3 +15,23 @@
     - setup (default configuration above)
         - Gathers facts from systems listed in inventory file
         - Example: ansible -m setup || ansible all -m setup --limit <ip-address>
+
+5. Ad-hoc commands with elevated privileges
+    - Commands that makes changes
+        - Update apt's cache:
+            - APT Documentation: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
+            - ansible all -m apt -a update_cache=yes --become --ask-become-pass
+
+        - Perform package installation
+            - Install on all workstations:
+                - ansible all -m apt -a name=<package-name> --become --ask-become-pass
+            - Install on specific workstation:
+                - ansible <ip-address> -m apt -a name=<package-name> --become --ask-become-pass
+            - Install latest package:
+                - ansible all -m apt -a "name=<package-name> state=latest" --become --ask-become-pass
+                - ansible <ip-address> -m apt -a "name=<name-of-package> state=latest" --become --ask-become-pass
+            - Perform dist-upgrade:
+                - ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
+            - Perform full-upgrade:
+                - ansible all -m apt -a "upgrade=full" --become --ask-become-pass
+            
