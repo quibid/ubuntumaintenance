@@ -14,7 +14,7 @@
 4. Using a module example
     - setup (default configuration above)
         - Gathers facts from systems listed in inventory file
-        - Example: ansible all -m setup -i inventory || ansible -m setup --limit <ip-address>
+        - Example: ansible all -m setup -i inventory || ansible all -m setup --limit <ip-address>
 
 5. Run a playbook example:
     - ansible-playbook --ask-become-pass <Name-of-yaml-file>.yml

@@ -6,4 +6,5 @@
 
   - name: update repository index
     apt:
-      update-cache: yes
+      update_cache: yes
+    when: ansible_distribution in ["PureOS", "Ubuntu", "Debian"]
