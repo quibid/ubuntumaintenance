@@ -1,0 +1,13 @@
+---
+
+- host: all
+  become: true
+  tasks:
+
+  - name: install alien and espeak
+    package:
+       name:
+         - "{{ alien_package }}"
+         - "{{ espeak_package }}"
+       state: latest
+       update_cache: yes

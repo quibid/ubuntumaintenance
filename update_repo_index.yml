@@ -4,7 +4,8 @@
   become: true
   tasks:
 
-  - name: update repository index
+  - name: Update system repository index
     apt:
+      name:
       update_cache: yes
     when: ansible_distribution in ["PureOS", "Ubuntu", "Debian"]
