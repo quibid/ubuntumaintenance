@@ -1,13 +1,16 @@
 ---
 
-- host: all
+- hosts: all
   become: true
   tasks:
 
-  - name: install alien and espeak
+  - name: Install alien, espeak, openssh-server and git
     package:
        name:
-         - "{{ alien_package }}"
-         - "{{ espeak_package }}"
+         - alien
+         - espeak
+         - openssh-server
+         - git
        state: latest
        update_cache: yes
+    when: ansible_distribution in ["PureOS", "Ubuntu", "Debian"]

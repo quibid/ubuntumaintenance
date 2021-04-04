@@ -1,0 +1,25 @@
+---
+
+- hosts: saintjohnsnetwork
+  become: true
+  tasks:
+
+  - name: Install updates on all systems
+    apt:
+       update_only: yes
+       update_cache: yes
+    when: ansible_distribution in ["PureOS", "Ubuntu", "Debian"]
+
+- hosts: distro_pureos
+  become: true
+  tasks:
+
+  - name: Install alien, espeak, openssh-server and git
+    package:
+       name:
+         - alien
+         - espeak
+         - openssh-server
+         - git
+       state: latest
+    when: ansible_distribution == "PureOS"
