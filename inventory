@@ -13,3 +13,10 @@
 
 [lords_system]
 192.168.1.62
+  ansible_user=quobod
+  remote_user=quobod
+
+[sjh]
+192.168.1.71
+192.168.1.112
+192.168.1.175

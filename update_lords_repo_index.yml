@@ -1,13 +1,12 @@
 ---
 
-- hosts: sjh
+- hosts: lords_system
   become: true
   tasks:
 
   - name: Update system repository index
-    package:
+    apt:
       name: "*"
       update_cache: yes
-      force_apt_get: true
       state: latest
-    when: ansible_distribution_release in ["pureos"]
+    when: ansible_distribution in ["Ubuntu"]

@@ -25,6 +25,9 @@
             - APT Documentation: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
             - ansible all -m apt -a update_cache=yes --become --ask-become-pass
 
+        - Perform dist-upgrade
+            - ansible-playbook --ask-become-pass update_repo_index.yml
+
         - Perform package installation
             - Install on all workstations:
                 - ansible all -m apt -a name=<package-name> --become --ask-become-pass
