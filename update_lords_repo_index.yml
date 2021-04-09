@@ -2,11 +2,14 @@
 
 - hosts: lords_system
   become: true
+  user: quobod
   tasks:
 
   - name: Update system repository index
     apt:
       name: "*"
       update_cache: yes
+      force_apt_get: true
       state: latest
-    when: ansible_distribution in ["Ubuntu"]
+    # when: ansible_distribution in ["Ubuntu"]
+# ansible-playbook -v -e 'ansible_python_interpreter=/usr/bin/python3' --ask-become-pass update_lords_repo_index.yml

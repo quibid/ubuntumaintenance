@@ -9,4 +9,5 @@
       autoremove: yes
       autoclean: yes
       update_cache: yes
+      force_apt_get: true
     when: ansible_distribution in ["PureOS", "Ubuntu", "Debian"]
