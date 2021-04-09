@@ -1,0 +1,15 @@
+---
+
+- hosts: lords_system
+  become: true
+  user: quobod
+  tasks:
+
+  - name: Clean up apt cache
+    apt:      
+      autoremove: yes
+      autoclean: yes
+      update_cache: yes
+      force_apt_get: true
+    # when: ansible_distribution in ["PureOS", "Ubuntu", "Debian"]
+# ansible-playbook -v -e 'ansible_python_interpreter=/usr/bin/python3' --ask-become-pass update_lords_repo_index.yml
