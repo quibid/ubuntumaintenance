@@ -42,5 +42,6 @@
                 - ansible all -m apt -a "upgrade=full" --become --ask-become-pass
         
         - Perform retry
+            - The "retry" file contains only the IP or FQDN address
             - ansible-playbook --limit @/home/sjhadmin/private/projects/desktop/ansible/getting_started/update_repo_index.retry --ask-become-pass update_repo_index.yml
             
