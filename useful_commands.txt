@@ -40,4 +40,7 @@
                 - ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
             - Perform full-upgrade:
                 - ansible all -m apt -a "upgrade=full" --become --ask-become-pass
+        
+        - Perform retry
+            - ansible-playbook --limit @/home/sjhadmin/private/projects/desktop/ansible/getting_started/update_repo_index.retry --ask-become-pass update_repo_index.yml
             
