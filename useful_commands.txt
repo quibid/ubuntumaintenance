@@ -19,14 +19,14 @@
 5. Run a playbook example:
     - ansible-playbook --ask-become-pass <Name-of-yaml-file>.yml
 
+    - Perform dist-upgrade
+        - ansible-playbook --ask-become-pass update_repo_index.yml
+
 5. Ad-hoc commands with elevated privileges
     - Commands that make changes
         - Update apt's cache:
             - APT Documentation: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
             - ansible all -m apt -a update_cache=yes --become --ask-become-pass
-
-        - Perform dist-upgrade
-            - ansible-playbook --ask-become-pass update_repo_index.yml
 
         - Perform package installation
             - Install on all workstations:
