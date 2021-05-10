@@ -10,4 +10,4 @@
       update_cache: yes
       force_apt_get: true
       state: latest
-    when: ansible_distribution_release in ["pureos"]
+    when: ansible_distribution in ["ClearLinux","Ubuntu"]
