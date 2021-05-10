@@ -4,7 +4,7 @@
   become: true
   tasks:
 
-  - name: Install updates on all systems
+  - name: Install updates
     apt:
        update_only: yes
        update_cache: yes
