@@ -26,4 +26,4 @@
          - xscreensaver-gl
          - xscreensaver-gl-extra
        state: latest
-    when: ansible_distribution == "PureOS"
+    when: ansible_distribution == "ClearLinux"
