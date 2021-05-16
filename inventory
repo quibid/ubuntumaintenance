@@ -1,23 +1,9 @@
-[saintjohnsnetwork]
-192.168.1.71
-192.168.1.112
-192.168.1.175
-192.168.1.20
+[goodshepardnetwork]
+10.1.10.110      ansible_python_interpreter=/usr/bin/python3
+10.1.10.106     ansible_python_interpreter=/usr/bin/python3
+10.1.10.112     ansible_python_interpreter=/usr/bin/python3
 
-[distro_pureos]
-192.168.1.71
-192.168.1.112
-192.168.1.175
-192.168.1.20
-
-[distro_ubuntu]
-192.168.1.62      ansible_python_interpreter=/usr/bin/python3
-
-[lords_system]
-192.168.1.62      ansible_python_interpreter=/usr/bin/python3
-
-[sjh]
-192.168.1.71      ansible_python_interpreter=/usr/bin/python3
-192.168.1.112     ansible_python_interpreter=/usr/bin/python3
-192.168.1.175     ansible_python_interpreter=/usr/bin/python3
-192.168.1.20      ansible_python_interpreter=/usr/bin/python3
+[goodshepardhosts]
+10.1.10.110      ansible_python_interpreter=/usr/bin/python3
+10.1.10.106     ansible_python_interpreter=/usr/bin/python3
+10.1.10.112     ansible_python_interpreter=/usr/bin/python3

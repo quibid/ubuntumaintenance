@@ -8,13 +8,23 @@
     package:
        name:
          - alien
+         - curl
+         - dmitry
          - espeak
+         - locate
          - openssh-server
          - git
+         - gnome-nettool
+         - gnome-tweaks
+         - htop
+         - planetblupi
+         - prips
          - tilix
          - xscreensaver
          - xscreensaver-gl
          - xscreensaver-gl-extra
+         - wget
+         - whois
        state: latest
        update_cache: yes
     when: ansible_distribution in ["Ubuntu"]

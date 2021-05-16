@@ -1,6 +1,6 @@
 ---
 
-- hosts: sjh
+- hosts: goodshepardhosts
   become: true
   tasks:
 
