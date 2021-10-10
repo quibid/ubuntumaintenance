@@ -1,0 +1,10 @@
+---
+
+- hosts: goodshepardhosts
+  become: true
+  tasks:
+
+  - name: Rebooting systems
+    reboot:
+      msg: "This system is going down for a reboot"
+      reboot_timeout: 156
